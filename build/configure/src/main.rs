@@ -60,9 +60,7 @@ fn main() -> Result<()> {
         build_bundle(build)?;
     }
 
-    if env::var("OFFLINE_BUILD").is_err() {
-        setup_sphix(build)?;
-    }
+    setup_sphix(build)?;
 
     check_rust(build)?;
     check_pylib(build)?;
